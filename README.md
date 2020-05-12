@@ -6,7 +6,7 @@
 
 --------------------------------------------------------------
 
-<p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Technologies used: <b>#java #springframework #mysql #springsecurity #thymeleaf #springdatajpa #hibernate #beanvalidation</b></p>
+<p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Application stores data in mysql database hosted on a personal zenbox server. Relations between tables are created using @ManyToMany and @OneToMany annotations. Application is deployed to Google App Engine. Technologies used: <b>#java #springframework #mysql #springsecurity #thymeleaf #springdatajpa #hibernate #beanvalidation</b></p>
 
 <br>
 
