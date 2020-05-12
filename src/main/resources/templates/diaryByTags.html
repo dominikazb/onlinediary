@@ -40,7 +40,7 @@
 
             <div class="singlenote">
 
-                <tr th:each="note : ${listOfNotesForTheCurrentUser}">
+                <tr th:each="note : ${listOfNotesByTagName}">
                     <div class="content">
 
 
@@ -49,11 +49,11 @@
                         <p class="text-justify"><td th:text="${note.content}"></td></p>
 
                         <div th:if="${note.tagsString.length() != 0}">
-                        <td>
+                            <td>
                             <span th:each="tag : ${note.tags}">
                                 <span class="tagLayout" th:text="${tag.tagName}"></span>
                             </span>
-                        </td>
+                            </td>
                         </div>
 
                         </br>

@@ -115,11 +115,11 @@ public class DiaryController {
         int noteId = note.getId();
 
         if(noteId != 0) {
-           Set<Category> listOfCategoriesForTheCurrentNote2 = getCategoriesFromInputAndConvertThemIntoSet(note);
-           Set<Tag> listOfTagsForTheCurrentNote2 = getTagsFromInputAndConvertThemIntoSet(note);
-           Note updatedNote = new Note(noteId, note.getDate(), note.getTitle(), note.getContent(), note.getCategoriesString(),
-                   note.getTagsString(), listOfCategoriesForTheCurrentNote, listOfTagsForTheCurrentNote, currentUser);
-           noteRepository.save(updatedNote);
+            Set<Category> listOfCategoriesForTheCurrentNote2 = getCategoriesFromInputAndConvertThemIntoSet(note);
+            Set<Tag> listOfTagsForTheCurrentNote2 = getTagsFromInputAndConvertThemIntoSet(note);
+            Note updatedNote = new Note(noteId, note.getDate(), note.getTitle(), note.getContent(), note.getCategoriesString(),
+                    note.getTagsString(), listOfCategoriesForTheCurrentNote, listOfTagsForTheCurrentNote, currentUser);
+            noteRepository.save(updatedNote);
         }
 
         if(noteId == 0) {
@@ -163,6 +163,31 @@ public class DiaryController {
         return "redirect:/diary";
     }
 
+    @GetMapping("/diary/category/{categoryName}")
+    public String getNotesByCategoryName(@PathVariable String categoryName, Model model) {
+        String currentUsername = (String) model.getAttribute("currentusername");
+        List<Note> listOfNotesByCategoryName = noteRepository.findAllNotesByCategoryName(categoryName, currentUsername);
+        model.addAttribute("listOfNotesByCategoryName", listOfNotesByCategoryName);
+
+        Set<Category> listOfCategoriesForTheCurrentUser = userRepository.findCategoriesByUser(currentUsername);
+        model.addAttribute("listOfCategoriesForTheCurrentUser", listOfCategoriesForTheCurrentUser);
+        Set<Tag> listOfTagsForTheCurrentUser = userRepository.findTagsByUser(currentUsername);
+        model.addAttribute("listOfTagsForTheCurrentUser", listOfTagsForTheCurrentUser);
+        return "diaryByCategories";
+    }
+
+    @GetMapping("/diary/tag/{tagName}")
+    public String getNotesByTagName(@PathVariable String tagName, Model model) {
+        String currentUsername = (String) model.getAttribute("currentusername");
+        List<Note> listOfNotesByTagName = noteRepository.findAllNotesByTagName(tagName, currentUsername);
+        model.addAttribute("listOfNotesByTagName", listOfNotesByTagName);
+
+        Set<Category> listOfCategoriesForTheCurrentUser = userRepository.findCategoriesByUser(currentUsername);
+        model.addAttribute("listOfCategoriesForTheCurrentUser", listOfCategoriesForTheCurrentUser);
+        Set<Tag> listOfTagsForTheCurrentUser = userRepository.findTagsByUser(currentUsername);
+        model.addAttribute("listOfTagsForTheCurrentUser", listOfTagsForTheCurrentUser);
+        return "diaryByTags";
+    }
 
 
     //methods

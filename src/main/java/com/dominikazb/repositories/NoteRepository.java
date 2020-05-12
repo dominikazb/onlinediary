@@ -25,6 +25,18 @@ public interface NoteRepository extends JpaRepository<Note, Long> {
     @Query("SELECT n FROM Note n WHERE n.user.username = :username ORDER BY n.date DESC")
     List<Note> findAllByUserAndOrderByDate(String username);
 
+    @Query(value = "SELECT * FROM note LEFT JOIN user ON user.user_id = note.user_id_fk " +
+            "LEFT JOIN notes_categories ON notes_categories.id_note = note.note_id " +
+            "LEFT JOIN category ON category.category_id = notes_categories.id_category " +
+            "WHERE category.category_name = :categoryName AND user.username = :username", nativeQuery = true)
+    List<Note> findAllNotesByCategoryName(String categoryName, String username);
+
+    @Query(value = "SELECT * FROM note LEFT JOIN user ON user.user_id = note.user_id_fk " +
+            "LEFT JOIN notes_tags ON notes_tags.id_note = note.note_id " +
+            "LEFT JOIN tag ON notes_tags.id_tag = tag.tag_id " +
+            "WHERE tag.tag_name = :tagName AND user.username = :username", nativeQuery = true)
+    List<Note> findAllNotesByTagName(String tagName, String username);
+
 
 
 }
