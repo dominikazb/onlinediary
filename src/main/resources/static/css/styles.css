@@ -1,0 +1,277 @@
+/*======================== VARIOUS ========================*/
+
+body {
+    color: lightblue;
+    font-family: 'Abel', sans-serif;
+}
+
+.bg-blue {
+    background-color: deepskyblue;
+}
+
+a {
+    color: deepskyblue;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+h3 {
+    color: black;
+}
+
+.topspace {
+    height: 50px;
+    background-color: transparent;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+/*======================== NAVBAR ========================*/
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+
+
+/*======================== NOTES ========================*/
+.singlenote {
+    background-color: transparent;
+}
+
+.content {
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 15px;
+    padding: 50px;
+    margin-bottom: 40px;
+    color: darkslategray;
+}
+
+
+/*======================== SIDEBAR ========================*/
+.sidebar {
+    background-color: white;
+    color: deepskyblue;
+    opacity: 0.9;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.sidebartop {
+    color: white;
+    background-color: deepskyblue;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    margin-top:-10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.sidebarcategories {
+    margin-top:30px;
+    padding: 10px;
+}
+
+
+.sidebartags {
+    margin-top:30px;
+    padding: 10px;
+}
+
+.abouttheauthor {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: deepskyblue;
+    padding-top:10px;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.abouttheauthor a {
+    color: white;
+}
+
+.abouttheauthor a:hover {
+    color: red;
+}
+
+
+/*======================== ADD NEW NOTE BUTTON ========================*/
+
+
+#addnewnote {
+    background-color: transparent;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index:1000;
+}
+
+
+.newnotebtn {
+    width:60px;
+    height:60px;
+    overflow: scroll;
+    outline: none; /*removing the shadow*/
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    color:#ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration:none;
+    background: deepskyblue;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+.newnotebtn:hover {
+     width:70px;
+     height:70px;
+     outline: none; /*removing the shadow*/
+     border: 4px solid #ffffff;
+     border-radius: 50%;
+     color:#ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     background: deepskyblue;
+     box-shadow: 0 0 3px gray;
+     font-size:25px;
+     font-weight:bold;
+ }
+
+.newnotebtn:active {
+    width:70px;
+    height:70px;
+    outline: none; /*removing the shadow*/
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    color:#ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: deepskyblue;
+    box-shadow: 0 0 3px gray;
+    font-size:25px;
+    font-weight:bold;
+}
+
+
+.newnotebtn:visited {
+    width:60px;
+    height:60px;
+    overflow: scroll;
+    outline: none; /*removing the shadow*/
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    color:#ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration:none;
+    background: deepskyblue;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+
+
+.round-button-circle:hover {
+    background:#30588e;
+}
+
+
+#noteform {
+    padding-bottom: 40px;
+}
+
+
+/*======================== BOTTOM DIV ========================*/
+
+.bottomspace {
+    height: 100px;
+}
+
+
+.sorry {
+    color: blue;
+}
+
+.sorry a {
+    color: black;
+}
+
+
+
+a.nav-link {
+    padding: 8px 0px; !important;
+}
+
+span.badge.badge-info {
+    background: deepskyblue; !important;
+}
+
+.categorylayout {
+    height: 30px;
+    padding: 5px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #eee;
+    align-items: center;
+    color: #333;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+}
+
+.tagLayout {
+    height: 30px;
+    padding: 5px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #eee;
+    align-items: center;
+    color: #333;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+}
+
+
+.list-group-item {
+    background-color: white; !important;
+    opacity: 0.9;
+    padding: 6px 10px; !important;
+
+}

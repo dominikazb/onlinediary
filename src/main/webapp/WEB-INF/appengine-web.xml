@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>onlinediary</application>
+    <version>alpha-001</version>
+    <threadsafe>true</threadsafe>
+    <sessions-enabled>true</sessions-enabled>
+    <static-files>
+        <include path="src/main/resources/static/**" />
+    </static-files>
+    <runtime>java8</runtime>
+</appengine-web-app>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+    <!--page font-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Virtual Diary | Your quiet place in the virtual world</title>
+
+</head>
+
+<body th:style="'background: url(/images/background.jpg) no-repeat center center fixed;'">
+
+
+<nav class="navbar navbar-default bg-blue">
+    <a class="nav-link" href="http://onlinediary.appspot.com">Home</a>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link" href="/logout">Logout <i class='fas fa-sign-out-alt'></i></a></li>
+    </ul>
+</nav>
+
+
+
+
+
+<div class="topspace"></div>
+
+<div id="addnewnote">
+    <a href="/addnote" class="newnotebtn"><i class="fa fa-plus icon-large"></i></a>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+
+            <div class="singlenote">
+
+                <tr th:each="note : ${listOfNotesForTheCurrentUser}">
+                    <div class="content">
+
+
+                        <p class="text-right"><td th:text="${#dates.format(note.date, 'YYYY-MM-dd')}"></td></p>
+                        <h3><td th:text="${note.title}"></td></h3>
+                        <p class="text-justify"><td th:text="${note.content}"></td></p>
+
+                        <b>Categories:</b>
+                        <td>
+                            <span th:each="category : ${note.categories}">
+                                <span th:text="${category.categoryName}"></span>
+                            </span>
+                        </td>
+
+                        <b>Tags:</b>
+                        <td>
+                            <span th:each="tag : ${note.tags}">
+                                <span th:text="${tag.tagName}"></span>
+                            </span>
+                        </td>
+                        <p class="text-right">
+                            <a th:href="@{'/edit' + ${note.id}}">edit</a> | <a th:href="@{'/delete/' + ${note.id}}">delete</a>
+                        </p>
+                    </div>
+                </tr>
+
+            </div><!-- singlenote -->
+        </div><!-- col-md-9 -->
+
+
+        <div class="col-md-3">
+            <div class="sidebar">
+
+                <div class="sidebartop">
+                        <span
+                                class="txt-rotate"
+                                data-period="2000"
+                                data-rotate='[ "This is your virtual diary...", "...your quiet place in the world."]'>
+
+                        </span>
+                </div>
+
+                <div class="sidebarcategories">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li>one</li>
+                        <li>two</li>
+                        <li>three</li>
+                        <li>four</li>
+                        <li>five</li>
+                    </ul>
+                </div>
+
+
+                <div class="sidebartags">
+                    <h4>Tags</h4>
+                    <ul>
+                        <li>one</li>
+                        <li>two</li>
+                        <li>three</li>
+                        <li>four</li>
+                        <li>five</li>
+                    </ul>
+                </div>
+
+
+                <div class="abouttheauthor">
+                    created with <i class="fas fa-heart"></i> by <a href="http://dominikazb.com">dominikazb.com</a>
+                </div>
+
+            </div><!-- sidebar -->
+        </div><!-- col-md-3 -->
+
+
+    </div><!-- row -->
+</div><!-- container -->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/js/typing.js"></script>
+
+
+</body>
+</html>

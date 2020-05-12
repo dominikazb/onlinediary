@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/loginstyles.css}" href="../../css/loginstyles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Virtual Diary | Log in</title>
+</head>
+
+<body class="main">
+<div class="grid mainelement">
+    <div class="register">
+        <form th:action="@{/login}" method="post">
+            <span th:if="${param.error}" class="alert alert-error">
+                Invalid username and/or password.
+            </span>
+            <div class="form_field">
+                <input type="text" class="form-control" id="username" name="username" placeholder="username" />
+            </div>
+            <div class="form_field">
+                <input type="password" class="form-control" id="password" name="password" placeholder="••••••••••••"/>
+            </div>
+            <div class="form_field">
+                <input type="submit" value="Log in">
+            </div>
+        </form>
+        <p>Log in with "demo" as login and password or</p>
+        <p><a href="/register">create your personal account</a>.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/tagsinput.css" rel="stylesheet" type="text/css">
+
+    <!--page font-->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Virtual Diary | Your quiet place in the virtual world</title>
+</head>
+
+
+
+<body th:style="'background: url(/images/background.jpg) no-repeat center center fixed;'">
+
+
+<nav class="navbar navbar-default bg-blue">
+    <a class="nav-link" href="http://onlinediary.appspot.com">Home</a>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link" href="/logout">Logout <i class='fas fa-sign-out-alt'></i></a></li>
+    </ul>
+</nav>
+
+<div class="topspace"></div>
+
+
+<div class="container">
+
+            <div class="singlenote">
+                <div class="content">
+
+                    <form action="#" method="post" th:action="@{/addnote}" th:object="${note}" id="noteform">
+                        <input type="hidden" th:field ="*{id}" th:value="*{id}" name="noteId" id="noteId" />
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="date">Date:</label>
+                                <input type="date" class="form-control" th:field = "*{date}" th:value="*{date}" id="date" placeholder="Date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="noteTitle">Title:</label>
+                            <input type="text" class="form-control" th:field = "*{title}" th:value="*{title}" id="noteTitle"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="noteContent">Content:</label>
+                            <textarea type="text" class="form-control" id="noteContent" th:field = "*{content}" th:value="*{content}" form="noteform" rows = "14" cols = "1"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputCategory">Category:</label>
+                            <input type="text" data-role="tagsinput" th:field = "*{categoriesString}" th:value="*{categoriesString}" id="inputCategory">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputTags">Tags:</label>
+                            <input type="text" data-role="tagsinput" th:field = "*{tagsString}" th:value="*{tagsString}" id="inputTags">
+                        </div>
+
+                        <input class="btn btn-primary float-right" th:type="submit" >
+                    </form>
+
+                    <div class="whitespace"></div>
+
+
+                </div><!-- content -->
+            </div><!-- singlenote -->
+
+</div><!-- container -->
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="/js/tagsinput.js"></script>
+<script src="/js/typing.js"></script>
+</body>
+</html>
+
+
