@@ -18,9 +18,9 @@
 This application has one additional file, which has not been uploaded to github repository.
 Under src/main/resources/ there is a file <b>application.properties</b> with the following content:
 
-spring.jpa.hibernate.ddl-auto=update
-spring.datasource.url=hostname
-spring.datasource.username=username
+spring.jpa.hibernate.ddl-auto=update<br>
+spring.datasource.url=hostname<br>
+spring.datasource.username=username<br>
 spring.datasource.password=password
 
 I did not include it, to not expose database details to public.
