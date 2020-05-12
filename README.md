@@ -6,7 +6,7 @@
 
 --------------------------------------------------------------
 
-<p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Technologies used: <b>#java #spring #springboot #mysql #springsecurity #thymeleaf #springdatajpa</b></p>
+<p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Technologies used: <b>#java #springframework #mysql #springsecurity #thymeleaf #springdatajpa #hibernate #beanvalidation</b></p>
 
 <br>
 
