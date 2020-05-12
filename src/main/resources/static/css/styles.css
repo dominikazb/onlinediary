@@ -9,24 +9,15 @@ body {
     font-family: 'Abel', sans-serif;
 }
 
-@media (max-width: 300px) {
-    body {
-        background-color: lightcyan;
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    #ci-hero-11 .widget-wrap , #ci-hero-12 .widget-wrap {
+
+        background-attachment: initial;
+
     }
 }
-@media (min-width: 301px) and (max-width: 600px) {
-    body {
-        background-color: lightcyan;
-    }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-    body {
-        background-color: lightcyan;
-    }
-}
-
-
-
 
 .bg-blue {
     background-color: deepskyblue;
