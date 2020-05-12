@@ -1,4 +1,4 @@
-<h2>Online Diary Application - development in progress...</h2>
+<h2>Online Diary Application</h2>
 
 --------------------------------------------------------------
 
