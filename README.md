@@ -46,8 +46,4 @@ I did not include it, to not expose database details to public.
 <b>Bibliography:</b>
 1. "Spring w Akcji. Wydanie V" <i>Craig Walls</i>. 2020 Helion S.A.
 2. "Czysty Kod. Podręcznik dobrego programisty." <i>Robert C. Martin</i>. 2014 Helion S.A.
-
-
-
-10. 
-11. https://www.baeldung.com
+3. https://www.baeldung.com
