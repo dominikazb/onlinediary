@@ -1,10 +1,15 @@
-<h3>Online Diary Application - development in progress...</h3>
+<h2>Online Diary Application - development in progress...</h2>
 
-<p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Technologies used: <b>#java #spring #springboot #mysql #springsecurity #thymeleaf #springdatajpa</b></p>
+--------------------------------------------------------------
+
+<h3>Visit online: <a href="https://onlinediary.appspot.com">https://onlinediary.appspot.com</a></h3>
+
+--------------------------------------------------------------
+
+<p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Technologies used: <b>#java #springframework #mysql #springsecurity #thymeleaf #springdatajpa #hibernate #beanvalidation</b></p>
 
 <br>
 
-<h2>Visit online: <a href="https://onlinediary.appspot.com">https://onlinediary.appspot.com</a></h2>
 
 <br>
 
@@ -14,7 +19,18 @@
 
 
 
+--------------------------------------------------------------
+This application has one additional file, which has not been uploaded to github repository.
+Under src/main/resources/ there is a file <b>application.properties</b> with the following content:
 
+spring.jpa.hibernate.ddl-auto=update<br>
+spring.datasource.url=hostname<br>
+spring.datasource.username=username<br>
+spring.datasource.password=password
+
+I did not include it, to not expose database details to public.
+
+--------------------------------------------------------------
 
 
 
