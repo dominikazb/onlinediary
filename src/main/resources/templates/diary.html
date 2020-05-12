@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+    <meta name="description" content="Your virtual diary. Your quiet space in the virtual world.">
+    <meta name="keywords" content="virtual, diary, online, diary, blog, personal, dominika, zurek, biesiada, junior, java, developer, portfolio">
+    <meta name="author" content="dominikazb.com">
 
     <!--page font-->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -17,9 +19,9 @@
     <title>Virtual Diary | Your quiet place in the virtual world</title>
 </head>
 
-<body th:style="'background: url(/images/background.jpg) no-repeat center center fixed;'">
+<!--<body th:style="'background: url(/images/background.jpg) no-repeat center center fixed;'">-->
 
-
+<body>
 <nav class="navbar bg-blue">
     <a class="nav-link" href="http://onlinediary.appspot.com/diary">Home</a>
     <ul class="nav navbar-nav navbar-right">
@@ -33,7 +35,6 @@
     <a href="/addnote" class="newnotebtn"><i class="fa fa-plus icon-large"></i></a>
 </div>
 
-
 <div class="container">
     <div class="row">
         <div class="col-md-9">
@@ -42,7 +43,6 @@
 
                 <tr th:each="note : ${listOfNotesForTheCurrentUser}">
                     <div class="content">
-
 
                         <p class="text-right"><td th:text="${#dates.format(note.date, 'YYYY-MM-dd')}"></td></p>
                         <h3><td th:text="${note.title}"></td></h3>
@@ -57,7 +57,6 @@
                         </div>
 
                         </br>
-
 
                         <p class="text-right">
                             <a th:href="@{'/edit/' + ${note.id}}">edit</a> | <a th:href="@{'/delete/' + ${note.id}}">delete</a>
@@ -85,7 +84,7 @@
                 <div class="sidebarcategories">
                     <h4>Categories:</h4>
                     <ul class="list-group list-group-flush" th:each="category : ${listOfCategoriesForTheCurrentUser}">
-                        <li th:href="@{'/diary/category/' + ${category.categoryName}}" class="list-group-item" th:text="${category.categoryName}"></li>
+                        <a th:href="@{'/diary/category/' + ${category.categoryName}}" class="list-group-item" th:text="${category.categoryName}"></a>
                     </ul>
                 </div>
 
@@ -101,19 +100,25 @@
                 </div>
             </div><!-- sidebar -->
 
-
         </div><!-- col-md-3 -->
-
 
     </div><!-- row -->
 </div><!-- container -->
 
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/typing.js"></script>
+<script src="/js/typing.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130692610-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-130692610-2');
+</script>
 
 </body>
 </html>

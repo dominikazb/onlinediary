@@ -19,7 +19,6 @@
 
 <body th:style="'background: url(/images/background.jpg) no-repeat center center fixed;'">
 
-
 <nav class="navbar bg-blue">
     <a class="nav-link" href="http://onlinediary.appspot.com/diary">Home</a>
     <ul class="nav navbar-nav navbar-right">
@@ -32,7 +31,6 @@
 <div id="addnewnote">
     <a href="/addnote" class="newnotebtn"><i class="fa fa-plus icon-large"></i></a>
 </div>
-
 
 <div class="container">
     <div class="row">
@@ -85,7 +83,7 @@
                 <div class="sidebarcategories">
                     <h4>Categories:</h4>
                     <ul class="list-group list-group-flush" th:each="category : ${listOfCategoriesForTheCurrentUser}">
-                        <li th:href="@{'/diary/category/' + ${category.categoryName}}" class="list-group-item" th:text="${category.categoryName}"></li>
+                        <a th:href="@{'/diary/category/' + ${category.categoryName}}" class="list-group-item" th:text="${category.categoryName}"></a>
                     </ul>
                 </div>
 
@@ -108,12 +106,10 @@
     </div><!-- row -->
 </div><!-- container -->
 
-
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/typing.js"></script>
-
+<script src="/js/typing.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Virtual Diary | Register new user</title>
 </head>
-<body>
-
 <body class="main">
+
 <div class="grid mainelement">
     <div class="register">
+
         <form th:action="@{/register}" th:object="${newuser}" method="post">
             <div class="form_field">
                 <input type="text" th:field = "*{username}" class="form-control" id="username" name="username" placeholder="username" />
@@ -28,16 +28,14 @@
                 <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Name Error</span>
             </div>
 
-
-
             <div class="form_field">
                 <input type="submit" value="Register">
             </div>
             <p>Back to <a href="/login">login page</a></p>
         </form>
+
     </div>
 </div>
-
 
 
 </body>
