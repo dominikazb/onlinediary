@@ -24,6 +24,7 @@ spring.datasource.username=username
 spring.datasource.password=password
 
 I did not include it, to not expose database details to public.
+
 --------------------------------------------------------------
 
 
