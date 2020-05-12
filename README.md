@@ -1,10 +1,15 @@
-<h3>Online Diary Application - development in progress...</h3>
+<h2>Online Diary Application - development in progress...</h2>
+
+--------------------------------------------------------------
+
+<h3>Visit online: <a href="https://onlinediary.appspot.com">https://onlinediary.appspot.com</a></h3>
+
+--------------------------------------------------------------
 
 <p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Technologies used: <b>#java #spring #springboot #mysql #springsecurity #thymeleaf #springdatajpa</b></p>
 
 <br>
 
-<h2>Visit online: <a href="https://onlinediary.appspot.com">https://onlinediary.appspot.com</a></h2>
 
 <br>
 
