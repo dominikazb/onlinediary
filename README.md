@@ -15,6 +15,14 @@
 
 <b>Screenshots:</b>
 
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary1.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary2.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary3.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary4.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary5.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary6.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary7.jpg">
+
 
 
 
