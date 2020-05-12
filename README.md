@@ -15,6 +15,14 @@
 
 <b>Screenshots:</b>
 
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary1.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary2.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary3.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary4.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary5.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary6.jpg">
+<img src="https://github.com/dominikazb/onlinediary/blob/master/screenshots/onlinediary7.jpg">
+
 
 
 
@@ -38,8 +46,4 @@ I did not include it, to not expose database details to public.
 <b>Bibliography:</b>
 1. "Spring w Akcji. Wydanie V" <i>Craig Walls</i>. 2020 Helion S.A.
 2. "Czysty Kod. Podręcznik dobrego programisty." <i>Robert C. Martin</i>. 2014 Helion S.A.
-
-
-
-10. 
-11. https://www.baeldung.com
+3. https://www.baeldung.com
