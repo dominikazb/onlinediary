@@ -1,10 +1,10 @@
 <h2>Online Diary Application</h2>
 
---------------------------------------------------------------
+<hr/>
 
 <h3>Visit online: <a href="https://onlinediary.appspot.com">https://onlinediary.appspot.com</a></h3>
 
---------------------------------------------------------------
+<hr/>
 
 <p>Online application to store your personal thoughts. The user can create new account, log in, create virtual diary notes, edit, or delete them, and log out. Application stores data in mysql database hosted on a personal zenbox server. Relations between tables are created using @ManyToMany and @OneToMany annotations. Application is deployed to Google App Engine.</p> <p>Technologies used:</p>
   
@@ -38,7 +38,7 @@
 
 
 
---------------------------------------------------------------
+<hr/>
 This application has one additional file, which has not been uploaded to github repository.
 Under src/main/resources/ there is a file <b>application.properties</b> with the following content:
 
@@ -49,7 +49,7 @@ spring.datasource.password=password
 
 I did not include it, to not expose database details to public.
 
---------------------------------------------------------------
+<hr/>
 
 
 
