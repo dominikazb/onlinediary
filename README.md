@@ -1,6 +1,5 @@
 <h2>Online Diary Application</h2>
 
-<hr/>
 
 <h3>Visit online: <a href="https://onlinediary.appspot.com">https://onlinediary.appspot.com</a></h3>
 
